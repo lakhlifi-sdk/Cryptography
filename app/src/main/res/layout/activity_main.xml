@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <com.google.android.material.appbar.MaterialToolbar
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#AA0000FF"
+        android:elevation="1dp">
+
+
+        <ImageButton
+            android:id="@+id/btn_mor_options"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_gravity="end"
+            android:src="@drawable/ic_baseline_more_vert_24">
+
+        </ImageButton>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/handwritten1"
+            android:text="Cryptography"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/colorWhite"
+            android:textSize="20dp">
+
+        </TextView>
+
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+
+
+    <ScrollView
+        android:layout_marginTop="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:adjustViewBounds="true">
+
+
+            </ImageView>
+            <ProgressBar
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:id="@+id/progress1"
+                android:layout_height="wrap_content">
+            </ProgressBar>
+
+
+
+            <TextView
+                android:id="@+id/select_picture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:onClick="changePhoto"
+                android:text="select picture"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                tools:ignore="OnClick" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtlayoutEmailsinIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                app:counterEnabled="true"
+                app:counterMaxLength="16">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editText_key"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Key"
+                    android:inputType="text"
+                    android:text="AA123F12C9EAEEEC" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/spinner"
+                android:layout_margin="30dp">
+            </Spinner>
+
+
+            <Button
+                android:id="@+id/button_crypt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="50dp"
+                android:focusable="true"
+
+                android:background="@drawable/btn_round"
+                android:fontFamily="@font/leckerlioneregular"
+                android:onClick="crypt"
+                android:text="Encrypt"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="22dp">
+
+            </Button>
+
+            <TextView
+                android:id="@+id/resulttxtview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+
+                android:text="Picture encrypted :"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                />
+
+
+
+            <ImageView
+                android:id="@+id/imageView_res"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:adjustViewBounds="true" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

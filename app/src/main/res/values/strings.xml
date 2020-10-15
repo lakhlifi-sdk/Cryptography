@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Encrypt app</string>
+
+    <array name="spinner">
+        <item>A5/2</item>
+        <item>A5/3</item>
+        <item>128-EEA3</item>
+        <item>128-EIA3</item>
+        <item>ZUK</item>
+
+    </array>
+</resources>
